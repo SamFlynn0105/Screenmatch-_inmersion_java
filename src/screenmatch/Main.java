@@ -36,12 +36,20 @@ public class Main {
 			ut.Scd("Pelicula retro");
 		}
 		
-		for (int i = 0; i < 3; i++)
+		/*for (int i = 0; i < 3; i++)
 		{
 		    ut.Scd("ingresa la evaluacion para la pelicula: ");
 		    double notaMatrix = ut.Ecd(0);
 		    mediaEvaluacionUsuario = mediaEvaluacionUsuario + notaMatrix;
 		    
+		}*/
+		int i = 0;
+		while (i < 3)
+		{
+			ut.Scd("ingresa la evaluacion para la pelicula: ");
+		    double notaMatrix = ut.Ecd(0);
+		    mediaEvaluacionUsuario = mediaEvaluacionUsuario + notaMatrix;
+		    i++;
 		}
 		
 		ut.Scd("Calificacion media usuario");
