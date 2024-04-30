@@ -14,6 +14,7 @@ public class Main {
 		double evaluacion = 4.5;
 		boolean IcluidoEnElPlanBasico = true;
 		String nombre = "Matrix";
+		@SuppressWarnings("unused")
 		String sinopsis = """
 				la mejor pelicula del fin del milenio
 				""";
