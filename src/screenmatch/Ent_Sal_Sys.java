@@ -34,5 +34,18 @@ public class Ent_Sal_Sys {
 		dat3 = teclado.nextDouble();
 		return dat3;
 	}
+	
+	public int Ecd(int dat4)
+	{
+		dat4 = teclado.nextInt();
+		teclado.nextLine();
+		return dat4;
+	}
+	
+	public String Ecd(String dat5)
+	{
+		dat5 = teclado.nextLine();
+		return dat5;
+	}
 
 }

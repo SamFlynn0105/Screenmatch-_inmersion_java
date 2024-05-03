@@ -1,62 +1,37 @@
 package screenmatch;
 
+import modelo.pelicula;
+import modelo.serie;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Ent_Sal_Sys ut = new Ent_Sal_Sys();
+		//Ent_Sal_Sys ut = new Ent_Sal_Sys();
+		//pelicula matrix = new pelicula();
+		//serie amigos = new serie();
+		principal prin = new principal();
+		//pelicula encanto = new pelicula();
 		
-		ut.Scd("Bienvenidos a la inmersion en Java");
-		//ut.icd("Pelicula Matrix");
-		
-		int fechaDeLanzamiento = 1999;
-		double evaluacion = 4.5;
-		boolean IcluidoEnElPlanBasico = true;
-		String nombre = "Matrix";
-		@SuppressWarnings("unused")
-		String sinopsis = """
-				la mejor pelicula del fin del milenio
-				""";
-		
-		double mediaEvaluacionUsuario = 0;
-		ut.Scd("Pelicula: " + nombre);
-		ut.Scd(fechaDeLanzamiento);
-		ut.Scd(evaluacion);
-		ut.Scd(IcluidoEnElPlanBasico);
-		
-		double mediaEvaluacion = (4.5 + 4.8 + 3) / 3;
-		ut.Scd("Media Evluacion: " + mediaEvaluacion);
-		
-		if (fechaDeLanzamiento >= 2023)
-		{
-			ut.Scd("Pelicula actual");
-		} 
-		else {
-			ut.Scd("Pelicula retro");
-		}
-		
-		/*for (int i = 0; i < 3; i++)
-		{
-		    ut.Scd("ingresa la evaluacion para la pelicula: ");
-		    double notaMatrix = ut.Ecd(0);
-		    mediaEvaluacionUsuario = mediaEvaluacionUsuario + notaMatrix;
-		    
-		}*/
-		int i = 0;
-		while (i < 3)
-		{
-			ut.Scd("ingresa la evaluacion para la pelicula: ");
-		    double notaMatrix = ut.Ecd(0);
-		    mediaEvaluacionUsuario = mediaEvaluacionUsuario + notaMatrix;
-		    i++;
-		}
-		
-		ut.Scd("Calificacion media usuario");
-		double mediacalc = mediaEvaluacionUsuario / 3;
-		ut.Scd(mediacalc);
-		
-
+//	    matrix.setNombre("Matrix");
+//	    matrix.setTiempoDeDuracionEnMinutos(120);
+//	    matrix.setFechaLanzamiento(1999);
+//	    matrix.muestraFichaTec(); 
+	   
+	    /*encanto.nombre = "Encanto";
+	    encanto.tiempoDeDuracionEnMinutos = 120;
+	    encanto.fechaLanzamiento = 1998;
+	    encanto.muestraFichaTec();*/
+	    
+//	    amigos.setNombre("Friens");
+//	    amigos.setFechaLanzamiento(1996);
+//	    amigos.setTemporadas(10);
+//	    amigos.setEpisodiosPorTemporad(22);
+//	    amigos.setDuracionEnMinutos(30);
+//	    amigos.muestraFichaTec();
+	    
+	    prin.muestraElMenu();
+	    
+	    
 	}
-
 }
