@@ -1,8 +1,5 @@
 package screenmatch;
 
-import modelo.pelicula;
-import modelo.serie;
-
 public class Main {
 
 	public static void main(String[] args) {

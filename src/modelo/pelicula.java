@@ -1,7 +1,5 @@
 package modelo;
 
-import screenmatch.Ent_Sal_Sys;
-
 public class pelicula extends titulo {
 	
 	private String director;

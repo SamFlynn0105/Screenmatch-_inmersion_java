@@ -11,6 +11,9 @@ public class titulo {
 	private boolean incluidoEnElPlanBasico;
 	private String sinopsis;
 	private int tiempoDeDuracionEnMinutos;
+	private int duracionEnMinutos;
+	private int temporadas;
+	private int episodiosPorTemporad;
 	
 	public void muestraFichaTec()
 	{
@@ -18,6 +21,17 @@ public class titulo {
 		ut.Scd("Nombre del Titulo: " + nombre);
 	    ut.Scd("Lanzamiento: " + fechaLanzamiento);
 	    ut.Scd("Duracion: " + getTiempoDeDuracionEnMinutos() + " min");	
+	}
+	
+	public void muestraFichaTecSerie()
+	{
+		ut.Scd("****Ficha Tecnica Serie****");
+		ut.Scd("Nombre del Titulo: " + nombre);
+	    ut.Scd("Lanzamiento: " + fechaLanzamiento);
+	    ut.Scd("Duracion x espisodio: " + duracionEnMinutos + " min");	
+	    ut.Scd("Numero de temporadas: " + temporadas);
+	    ut.Scd("Numero episodios x temporada: " + episodiosPorTemporad);
+	    ut.Scd("Duracion total episodios x temporada: " + getTiempoDeDuracionEnMinutos() + " min");	
 	}
 
 	
@@ -64,5 +78,29 @@ public class titulo {
 
 	public void setTiempoDeDuracionEnMinutos(int tiempoDeDuracionEnMinutos) {
 		this.tiempoDeDuracionEnMinutos = tiempoDeDuracionEnMinutos;
+	}
+	
+	public int getDuracionEnMinutos() {
+		return duracionEnMinutos;
+	}
+
+	public void setDuracionEnMinutos(int duracionEnMinutos) {
+		this.duracionEnMinutos = duracionEnMinutos;
+	}
+
+	public int getTemporadas() {
+		return temporadas;
+	}
+
+	public void setTemporadas(int temporadas) {
+		this.temporadas = temporadas;
+	}
+
+	public int getEpisodiosPorTemporad() {
+		return episodiosPorTemporad;
+	}
+
+	public void setEpisodiosPorTemporad(int episodiosPorTemporad) {
+		this.episodiosPorTemporad = episodiosPorTemporad;
 	}
 }

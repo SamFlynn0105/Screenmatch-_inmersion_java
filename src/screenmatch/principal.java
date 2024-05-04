@@ -1,6 +1,8 @@
 package screenmatch;
 
+import modelo.calc_tiempo;
 import modelo.pelicula;
+import modelo.serie;
 
 public class principal {
 	
@@ -8,6 +10,8 @@ public class principal {
 		
 		Ent_Sal_Sys ut = new Ent_Sal_Sys();
 		pelicula pelusu = new pelicula();
+		serie serieUsuario = new serie();
+		calc_tiempo tiempoVisual = new calc_tiempo();
 				
 		int opcion = 0;
 		
@@ -20,6 +24,7 @@ public class principal {
 					
 					9.- Salir
 					""";
+			
 			ut.Scd(menu);
 			opcion = ut.Ecd(opcion);
 			
@@ -41,6 +46,33 @@ public class principal {
 				break;
 			}
 			
+			case 2: {
+				
+				ut.Scd("Ingrese titulo de la serie: ");
+				String nombre = ut.Ecd(null);
+				ut.Scd("Ingrese fecha de lanzamiento: ");
+				int fechaDeLanzamiento = ut.Ecd(0);
+				ut.Scd("Ingrese tiempo de duracion minutos x episodio: ");
+				int duracionxcap = ut.Ecd(0);
+				ut.Scd("Ingrese numero de temporadas: ");
+				int numeroTemporadas = ut.Ecd(0);
+				ut.Scd("Ingrese episodios x temporadas: ");
+				int episodiosxTemp = ut.Ecd(0);
+				
+				serieUsuario.setNombre(nombre);
+				serieUsuario.setFechaLanzamiento(fechaDeLanzamiento);
+				serieUsuario.setDuracionEnMinutos(duracionxcap);
+				serieUsuario.setTemporadas(numeroTemporadas);
+				serieUsuario.setEpisodiosPorTemporad(episodiosxTemp);
+				//serieUsuario.setEvalUsuario(4.5);
+				serieUsuario.muestraFichaTecSerie();
+				tiempoVisual.calculoTiempo(duracionxcap,numeroTemporadas,episodiosxTemp);
+				
+				//ut.Scd(serieUsuario.getEvalUsuario());
+				
+				break;
+			}
+			
 			case 9: {
 				ut.Scd("Salimos del programa...");
                 break;			
@@ -48,7 +80,7 @@ public class principal {
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + opcion);
 			}
-		    opcion = 0;	
+		
 		}
 		
 	}
